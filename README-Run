@@ -1,0 +1,43 @@
+# RIO: Retinal Intelligence Orchestrator (MATLAB Implementation)
+
+This repository provides the MATLAB implementation of a reliability-aware retinal diagnostic framework based on a decision-oriented AI agent (RIO).
+The framework integrates image preprocessing, deep learning–based classification, and a policy-driven decision mechanism into a unified system designed for safe and practical deployment in retinal screening workflows.
+## 🔷 Framework Overview
+The proposed system consists of the following main components:
+
+### 1. Quality-Aware Preprocessing Agent
+- Green channel extraction
+- CLAHE (contrast enhancement)
+- Bilateral filtering (denoising)
+- Adaptive gamma correction
+This stage enhances image quality and reduces the impact of acquisition variability.
+---
+### 2. Deep Learning Classification Model
+- CNN-based architecture with attention mechanism
+- Two-stage training:
+  - Stage A: initial training
+  - Stage B: fine-tuning for improved performance and confidence calibration
+---
+### 3. Retinal Intelligence Orchestrator (RIO)
+- Decision-oriented AI agent
+- Integrates:
+  - Image quality indicators
+  - Model confidence scores
+- Produces structured decisions:
+  - ACCEPT
+  - REVIEW
+  - RETAKE
+This transforms the system from a prediction model into a reliability-aware decision-support framework.
+---
+
+## 🔷 Main Files
+- `RIOAgent.m` → 🔴 **Main entry point (Run this file)**
+- `AttCNN.m` → Model training (Stage A)
+- `FineTuningTrain.m` → Fine-tuning (Stage B)
+- `EvaluationFineTunning.m` → Evaluation (metrics, confusion matrix, ROC)
+- `preprocessing Agent.m` → Full preprocessing pipeline
+- `preprocessing main.m` → Additional preprocessing script
+---
+## ▶️ How to Run
+1. Open MATLAB (recommended: R2021a or later)
+2. Run the main AI agent: RIOAgent
